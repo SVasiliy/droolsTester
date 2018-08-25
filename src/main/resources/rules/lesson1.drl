@@ -12,9 +12,10 @@ global OutputDisplay showResults;
 rule "Your First Rule"
 
     when
-        Account()
+        $acc : Account()
     then
         showResults.showText("The account exists");
+        $acc.setBalance(20.0);
 
 end
 

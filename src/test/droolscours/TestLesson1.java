@@ -52,9 +52,10 @@ public class TestLesson1 {
 		FactHandle handler = sessionStatefull.insert(account);
 		account.setBalance(12.0);
 		sessionStatefull.update(handler, account);
-		sessionStatefull.delete(handler);
+		//sessionStatefull.delete(handler);
 		
 		sessionStatefull.fireAllRules();
+		System.out.println("account updated balance: " + account.getBalance());
 		System.out.println("rules fired");
 	}
 
