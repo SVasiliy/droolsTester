@@ -1,0 +1,29 @@
+//created on: Aug 24, 2018
+package droolscours
+
+//list any import classes here.
+
+import droolscours.Account;
+
+//declare any global variables here
+
+
+
+
+rule "Your First Rule"
+
+    when
+        Account()
+    then
+        System.out.println("The account exists");
+
+end
+
+rule "Your Second Rule"
+    //include attributes such as "salience" here...
+    when
+        //conditions
+    then
+        //actions
+
+end
