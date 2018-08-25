@@ -9,6 +9,7 @@ import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.StatelessKieSession;
 
 import util.KnowledgeSessionHelper;
+import util.OutputDisplay;
 
 @SuppressWarnings("restriction")
 public class TestLesson1 {
@@ -25,6 +26,8 @@ public class TestLesson1 {
 	@Test
 	public void test() {
 		sessionStatefull = KnowledgeSessionHelper.getStatefullKnowledgeSession(kieContainer, "ksession-rules");
+		OutputDisplay outputDisplay = new OutputDisplay();
+		sessionStatefull.setGlobal("showResults", outputDisplay);
 		Account account = new Account();
 		sessionStatefull.insert(account);
 		sessionStatefull.fireAllRules();
