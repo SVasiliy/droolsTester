@@ -20,4 +20,9 @@ public class AccountingPeriod {
 		this.endDate = endDate;
 	}
 	
+	@Override
+	public String toString() {
+		return "AccountingPeriod [startDate=" + startDate + ", endDate=" + endDate + "]";
+	}
+	
 }
